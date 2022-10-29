@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <meta name="format-detection" content="telephone=no" />
   <!-- meta情報 -->
-  <title>CodeUps</title>
+  <title>湧泉家</title>
   <meta name="description" content="" />
   <meta name="keywords" content="" />
   <!-- ogp -->
@@ -17,15 +17,243 @@
   <meta property="og:description" content="" />
   <!-- ファビコン -->
   <link rel="”icon”" href="" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
   <!-- css -->
+
+  <!-- <link rel="stylesheet" href="./css/swiper-bundle8.4.4.min.cssstyles.css"> -->
+  <link rel="stylesheet"
+  href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+/>
   <link rel="stylesheet" href="./css/styles.css">
   <!-- JavaScript -->
+  <script sec="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <!-- <script defer src="./js/swiper-bundle8.4.4.min.js"></script> -->
   <script defer src="./js/script.js"></script>
 </head>
 <body>
-  <div class="inner">
-  <p class="test">変更のテスト</p>
-</div>
+ <header class="p-header l-header">
+    <div class="p-header__inner">
+      <div class="p-header__logo">
+        ペンション湧泉家
+      </div>
+      <div class="p-header__tel">
+        <!-- 電話番号テスト後変更 -->
+        <span class="p-header__tel-icon"><img src="images/common/Icon-phone.png" alt="電話のアイコン"></span>
+        <a href="tel:090-2752-2868">0980-76-3300</a>
+      </div>
+    </div>
+ </header>
+ <section class="p-mv">
+   <div class="p-mv__inner">
+     <div class="p-mv__titles">
+       <h1 class="p-mv__title">
+        宮古空港より車で4分の恵まれた環境の湧泉家
+       </h1>
+       <p class="p-mv__text">宮古島滞在の拠点としてご利用ください
+        <br>長期・短期・素泊まり大歓迎です！</p>
+
+     </div>
+     <div class="p-mv__images">
+      <picture class="p-mv__picture">
+        <source media="(min-width: 768px)" srcset="images/common/mv-1.png">
+        <img src="images/common/mv-2.png" alt="ペンションわくみや">
+      </picture>
+    </div>
+     
+   </div>
+ </section>
+ <section class="p-concept">
+   <div class="p-concept__inner">
+     <div class="p-concept__left">
+       <h2 class="p-concept__title c-section__title">コンセプト</h2>
+       <div class="p-concept__text">
+        当館は宮古空港より車で4分の距離にあり、市街地ビーチ、ゴルフ場
+        などの娯楽施設や観光各所へ車で約5分～30分という恵まれた環境に
+        立地しております。<br>
+        当館より徒歩2分ほど歩くと釣り人に人気の川満漁港と公園があり、
+        釣りや散歩がてらにサンセットを見に行くのもおすすめです！<br>
+        また、朝・夕の2食付き（月曜日～土曜日）のプランもあり、
+        お食事の心配をすることなくビジネスから観光まですべてのお客様に
+        安心してお泊りいただけます
+       </div>
+      </div>
+      <div class="p-concept__right">
+        <div class="p-concept__image">
+            <figure class="p-concept__figure">
+            <img src="images/common/concept-img.jpg" alt="宮古島の風景" loading="lazy" width="500" height="668">
+          </figure>
+        </div>
+      </div>
+   </div>
+ </section>
+ <section class="p-rooms">
+   <div class="p-rooms__title c-section__title">お部屋</div>
+   <div class="p-rooms__inner">
+     <div class="p-rooms__left">
+       <figure class="p-rooms__figure">
+         <img src="images/common/rooms.jpg" alt="室内写真" loading="lazy" width="393" height="666">
+       </figure>
+     </div>
+     <div class="p-rooms__right">
+      <div class="p-rooms__right-top rooms-texts">
+        <ul class="rooms__text-top">
+          <li class="rooms__list">本館・別館 <span class="rooms-span-top">全13室</span> </li>
+          <li class="rooms__list">本館5部屋 <span class="rooms-span-middle">（２階）</span> </li>
+          <li class="rooms__list">別館8部屋 <span class="rooms-span-middle">（２階・3階）</span> </li>
+       </ul>
+        <ul class="rooms__text-bottom">
+          <li class="rooms__list">食堂 本館１階 </li>
+          <li class="rooms__list">朝食 <span class="rooms-span-time"> ※7:30までにご入店下さい</span> </li>
+          <li class="rooms__list">夕食 <span>※19:30までにご入店下さい</span> </li>
+       </ul>
+      </div>
+     </div>
+   </div>
+ </section>
+ <section class="p-price">
+  <h2 class="p-price__title c-section__title">宿泊料金</h2>
+   <div class="p-price__inner">
+     <div class="p-price__texts">
+       <h3 class="price__sub-title">
+        別館宿泊料
+       </h3>
+       <div class="p-price__text--top price__texts">
+          <div class="price__text--left">
+            短期(2泊まで）
+          </div>
+          <div class="price-center--center">
+            1泊 2食付き(月〜土) 
+          </div>
+          <div class="price-center--right">
+            5,500円(税込 6,050円) 
+          </div>
+        </div>
+        <div class="p-price__text--middle price__texts">
+          
+          <div class="price-center--left-center">
+            素泊まり及び日曜日
+          </div>
+          <div class="price-center--right">
+            4,000円(税込4,400円)
+          </div>
+        </div>
+       </div>
+       <div class="p-price__text--top price__texts">
+          <div class="price__text--left">
+            長期(3泊以上)
+          </div>
+          <div class="price-center--center">
+            1泊 2食付き(月〜土) 
+          </div>
+          <div class="price-center--right">
+            5,000円(税込 5,500円)
+          </div>
+         </div>
+         <div class="p-price__text--middle price__texts">
+          
+          <div class="price-center--left-center">
+            素泊まり及び日曜日
+          </div>
+          <div class="price-center--right">
+            3,500円(税込 4,400円) 
+          </div>
+        </div>
+     </div>
+     <div class="p-price__text--bottom text-attentions">
+      <ul class="text-attention">
+        <li class="text-attention__list">※本館宿泊料につきましては担当までお問い合わせください。</li>
+        <li class="text-attention__list">※クレジットカードはご利用できません。お支払いは現金のみでお願い致します。</li>
+        <li class="text-attention__list">※記載料金は全てお一人様の料金です。</li>
+      </ul>
+     </div>
+   </div>
+ </section>
+ <section class="p-parallax">
+
+ </section>
+ <section class="p-information">
+   <div class="p-information__inner">
+     <div class="p-information__title c-section__title">
+       基本情報
+     </div>
+     <div class="p-information__container">
+       <div class="p-information__items information__items p-information__items--odd">
+         <div class="information__item">
+          住所
+         </div>
+         <div class="information__list">
+          〒906 - 0301 沖縄県宮古島市下地川満 126
+         </div>
+       </div>
+       <div class="p-information__items information__items">
+         <div class="information__item">
+          TEL   
+         </div>
+         <div class="information__list">
+          0980 - 76 - 3300 
+         </div>
+       </div>
+       <div class="p-information__items information__items p-information__items--odd">
+         <div class="information__item">
+          交通アクセス
+         </div>
+         <div class="information__list">
+          宮古空港よりお車で4分
+         </div>
+       </div>
+       <div class="p-information__items information__items">
+         <div class="information__item">
+          駐車場
+         </div>
+         <div class="information__list">
+          15台 無料 先着順
+         </div>
+       </div>
+       <div class="p-information__items information__items p-information__items--odd">
+         <div class="information__item">
+          チェックイン<br>チェックアウト
+         </div>
+         <div class="information__list">
+          10:00 (最終チェックイン 19:00)<br>11:00
+         </div>
+       </div>
+       <div class="p-information__items-other p-information__items--odd">
+        ※チェックイン・チェックアウトの時間帯の希望がある際にはお気軽にご相談ください。
+       </div>
+       <div class="p-information__items information__items">
+         <div class="information__item">
+          館内設備
+         </div>
+         <div class="information__list">
+          洗濯機及び電子レンジ(各階に1台)
+         </div>
+       </div>
+       <div class="p-information__items information__items p-information__items--odd">
+         <div class="information__item">
+          部屋設備・備品
+         </div>
+         <div class="information__list">
+          エアコン・テレビ・冷蔵庫・物干し・ハンガー・電気ケトル
+          シャンプー・リンス・ボディソープ・ボディタオル
+          バスタオル・フェイスタオル
+         </div>
+       </div>
+
+     </div>
+    </div>
+ </section>
+ <section class="p-gallery">
+  <div class="p-gallery__inner">
+      <div class="p-gallery__figure">
+          <div class="p-gallery__images"></div>
+          <div class="p-gallery__images"></div>
+          <div class="p-gallery__images"></div>
+          <div class="p-gallery__images"></div>
+          <div class="p-gallery__images"></div>
+          <div class="p-gallery__images"></div>
+      </div>
+  </div>
+</section>
 </body>
 </html>

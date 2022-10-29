@@ -1,0 +1,19 @@
+@use "global" as *;
+.p-parallax {
+    height: 600px;
+  }
+  
+  /* 背景画像 */
+  .p-parallax::before {
+    background-image: url(../../../images/common/parallax-2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: -3;
+  }

@@ -1,0 +1,111 @@
+@use "global" as *;
+
+.p-price{
+padding: rem(300) rem(40) rem(200);
+background: $white;
+}
+.p-price__title{
+text-align: center;
+}
+.p-price__inner{
+    padding-top:rem(100);
+    width: 100%;
+    margin: 0 auto;
+max-width: rem(700);
+position: relative;
+}
+.p-price__inner::before{
+    position: absolute;
+    width: 140%;
+    height:140%;
+    top: 50%;
+    transform: translateY(-40%);
+    left: -100%;
+    content: "";
+    background: url(../../../images/common/price-flower.png)no-repeat center center / contain; 
+    overflow: hidden;
+}
+.p-price__inner::after{
+    position: absolute;
+    width: 140%;
+    height:140%;
+    top: 50%;
+    transform: translateY(-40%);
+     right: -100%;
+    content: "";
+    background: url(../../../images/common/price-flower.png)no-repeat center center / contain; 
+    overflow: hidden;
+}
+.p-price__texts{
+padding-bottom: rem(10);
+}
+.price__sub-title{
+font-size: rem(24);
+font-family: $base-font-family;
+padding-bottom: rem(10);
+color: $black;
+
+}
+.price__texts{
+display: flex;
+padding-bottom: rem(20);
+
+}
+.p-price__text--top{
+  border-bottom: 1px solid $black;
+  padding-bottom: rem(5);
+}
+.price__text--left{
+font-size: rem(18);
+font-family: $base-font-family;
+width: 40%;
+padding-left: rem(3);
+letter-spacing: 1.25px;
+}
+.price-center--center{
+ font-size: rem(18);
+font-family: $base-font-family;
+width: 30%;
+text-align: right;
+padding-right: rem(10);
+letter-spacing: 1.25px;
+}
+.price-center--right{
+font-size: rem(18);
+font-family: $base-font-family;
+width: 30%;
+letter-spacing: 1.25px;
+    
+}
+
+.price-center--left-center{
+    width: 70%;
+    letter-spacing: 1.25px;
+    text-align: right;
+    padding-right: rem(10);
+    font-size: rem(18);
+font-family: $base-font-family;
+    
+}
+.price-center--right{
+    letter-spacing: 1.25px;
+    width: 30%;
+    font-size: rem(18);
+font-family: $base-font-family;
+
+}
+.p-price__text--bottom{
+    text-align: center;
+    letter-spacing: 1.25px;
+
+}
+.text-attention{
+padding-top: rem(50);
+display: inline-block;
+}
+.text-attention__list{
+text-align: left;
+letter-spacing: 1.25px;
+font-family: $base-font-family;
+color: $black;
+}

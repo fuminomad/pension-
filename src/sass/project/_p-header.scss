@@ -1,0 +1,49 @@
+@use "global" as *;
+.p-header{
+height: rem(100);
+background: $white;
+}
+.p-header__inner{
+display: flex;
+justify-content: center;
+position: relative;
+@include mq(md){
+    justify-content: space-between;
+    }
+}
+.p-header__logo{
+margin: 0;
+line-height: rem(100);
+font-size: rem(24);
+color: $navy;
+font-weight: $bold;
+font-family: $base-font-family;
+@include mq(md){
+    padding-left: rem(40);
+    }
+}
+.p-header__tel{
+    display: flex;
+   margin-top: rem(23);
+   position: absolute;
+   right: 0;
+   margin-right: rem(100);
+   padding: rem(10) rem(24);
+   border: solid 2px $navy;
+   @include mq(md){
+       margin-right: 40px;
+       
+       }
+  }
+.p-header__tel a{
+    font-size: rem(24);
+    color: $navy;
+    font-family: $base-font-family;
+}
+.p-header__tel-icon{
+    display: inline-block;
+    padding-right: rem(10);
+    width: rem(36);
+    height: rem(24);
+    padding-top: rem(5);
+}
