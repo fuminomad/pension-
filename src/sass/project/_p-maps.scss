@@ -34,6 +34,9 @@ padding-bottom: rem(80);
     font-weight: $bold;
     display: flex;
     justify-content: center;
+    @include mq(md){
+        font-size: rem(18);
+        }
 }
 .p-maps__list{
 padding-right: rem(30);

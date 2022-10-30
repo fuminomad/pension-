@@ -47,10 +47,10 @@ html {
 }
 @media (min-width: 768px) {
   html {
-    font-size: 1.4545454545vw;
+    font-size: 1.1428571429vw;
   }
 }
-@media (min-width: 1100px) {
+@media (min-width: 1400px) {
   html {
     font-size: 16px;
   }
@@ -200,10 +200,14 @@ select::-ms-expand {
 }
 @media screen and (max-width: 767px) {
   .inner {
-    max-width: 1150px;
+    max-width: 1450px;
     padding-right: 25px;
     padding-left: 25px;
   }
+}
+
+.slick-img img {
+  width: 100%;
 }
 
 @-webkit-keyframes zoomUp {
@@ -213,8 +217,23 @@ select::-ms-expand {
   }
   100% {
     -webkit-transform: scale(1.15);
-            transform: scale(1.15);
+            transform: scale(1.15); /* 拡大率 */
   }
+}
+
+@keyframes zoomUp {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15); /* 拡大率 */
+  }
+}
+.add-animation {
+  -webkit-animation: zoomUp 10s linear 0s normal both;
+          animation: zoomUp 10s linear 0s normal both;
 }
 
 @keyframes zoomUp {
@@ -252,7 +271,6 @@ select::-ms-expand {
   padding-top: 4.375rem;
   padding: 70px 40px 400px;
   padding: 4.375rem 2.5rem 25rem;
-  background: #fff;
 }
 
 .p-concept__inner {
@@ -263,15 +281,30 @@ select::-ms-expand {
   max-width: 1350px;
   margin: 0 auto;
 }
+@media screen and (max-width: 767px) {
+  .p-concept__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 
 .p-concept__left {
-  padding-top: 76px;
-  padding-top: 4.75rem;
   width: 45%;
   text-align: center;
   position: relative;
-  min-width: 545px;
-  min-width: 34.0625rem;
+  max-width: 545px;
+  max-width: 34.0625rem;
+  padding-top: 40px;
+  padding-top: 2.5rem;
+}
+@media screen and (max-width: 767px) {
+  .p-concept__left {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 37.5rem;
+  }
 }
 
 .p-concept__left::after {
@@ -280,10 +313,15 @@ select::-ms-expand {
   width: 23.6875rem;
   height: 264px;
   height: 16.5rem;
-  bottom: -15%;
+  bottom: 0%;
   left: 5%;
   content: "";
   background: url(../../../images/common/blue-sky.png) no-repeat center center/contain;
+}
+@media screen and (max-width: 767px) {
+  .p-concept__left::after {
+    display: none;
+  }
 }
 
 .p-concept__text {
@@ -302,6 +340,11 @@ select::-ms-expand {
   padding-top: 50px;
   padding-top: 3.125rem;
   width: 50%;
+}
+@media screen and (max-width: 767px) {
+  .p-concept__right {
+    width: 100%;
+  }
 }
 
 .p-concept__image {
@@ -325,18 +368,6 @@ select::-ms-expand {
   height: 100%;
 }
 
-.p-concept__figure::after {
-  position: absolute;
-  width: 380px;
-  width: 23.75rem;
-  height: 298px;
-  height: 18.625rem;
-  bottom: -15%;
-  right: -40%;
-  content: "";
-  background: url(../../../images/common/concept-img-small.jpg) no-repeat center center/contain;
-}
-
 .p-footer {
   background: #1B2F5B;
   padding-top: 98px;
@@ -357,12 +388,26 @@ select::-ms-expand {
   width: 12.5rem;
   height: 285px;
   height: 17.8125rem;
+  width: 10.41vw;
+  height: 14.84vw;
   bottom: -5px;
   bottom: -0.3125rem;
   right: 31%;
   content: "";
   background: url(../../../images/common/tree-right.png) no-repeat center center/contain;
   overflow: hidden;
+}
+@media screen and (max-width: 1439px) {
+  .p-footer::after {
+    right: 29%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .p-footer::after {
+    width: 20.82vw;
+    height: 29.68vw;
+    right: 11%;
+  }
 }
 
 .p-footer::before {
@@ -373,6 +418,8 @@ select::-ms-expand {
   width: 11.1875rem;
   height: 200px;
   height: 12.5rem;
+  width: 9.3vw;
+  height: 10.41vw;
   bottom: -5px;
   bottom: -0.3125rem;
   left: 32%;
@@ -380,6 +427,18 @@ select::-ms-expand {
   background: url(../../../images/common/tree-left.png) no-repeat center center/contain;
   overflow: hidden;
   z-index: 1;
+}
+@media screen and (max-width: 1439px) {
+  .p-footer::before {
+    left: 29%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .p-footer::before {
+    width: 18.6vw;
+    height: 20.82vw;
+    left: 11%;
+  }
 }
 
 .footer__sub-title {
@@ -427,6 +486,11 @@ select::-ms-expand {
   font-size: 16px;
   font-size: 1rem;
 }
+@media screen and (max-width: 767px) {
+  .p-footer__copy-light {
+    font-size: 0.875rem;
+  }
+}
 
 .p-gallery {
   padding-bottom: 100px;
@@ -442,6 +506,11 @@ select::-ms-expand {
   padding-bottom: 20px;
   padding-bottom: 1.25rem;
   background: #fff;
+}
+@media screen and (max-width: 767px) {
+  .p-gallery__inner {
+    max-width: 90%;
+  }
 }
 
 .p-gallery__images:nth-of-type(1) {
@@ -474,6 +543,11 @@ select::-ms-expand {
   gap: 0.625rem;
   grid-template: 250px 250px/1fr 1fr 1fr;
   background-color: #fff;
+}
+@media screen and (max-width: 767px) {
+  .p-gallery__figure {
+    grid-template: 200px 200px 200px/1fr 1fr;
+  }
 }
 
 .p-header {
@@ -554,6 +628,151 @@ select::-ms-expand {
   padding-top: 0.3125rem;
 }
 
+.p-information {
+  padding: 100px 40px 70px;
+  padding: 6.25rem 2.5rem 4.375rem;
+  background: #fff;
+  text-align: center;
+}
+
+.p-information__inner {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 765px;
+  max-width: 47.8125rem;
+  position: relative;
+}
+
+.p-information__inner::before {
+  display: none;
+}
+@media screen and (min-width: 1440px) {
+  .p-information__inner::before {
+    position: absolute;
+    width: 13.8vw;
+    height: 25.7vw;
+    top: 50%;
+    -webkit-transform: translateY(-40%);
+            transform: translateY(-40%);
+    right: 100%;
+    left: calc(50% - 41.125rem);
+    content: "";
+    background: url(../../../images/common/red-flower.png) no-repeat center center/contain;
+    overflow: hidden;
+    display: block;
+  }
+}
+
+.p-information__inner::after {
+  display: none;
+}
+@media screen and (min-width: 1440px) {
+  .p-information__inner::after {
+    position: absolute;
+    content: "";
+    background: url(../../../images/common/water.png) no-repeat center center/contain;
+    overflow: hidden;
+    width: 18.9vw;
+    height: 21.4vw;
+    top: 0;
+    right: calc(50% - 43.75rem);
+    display: block;
+  }
+}
+
+.p-information__title {
+  text-align: center;
+  position: relative;
+  display: inline-block;
+}
+
+.p-information__title::after {
+  display: none;
+}
+@media screen and (max-width: 1439px) {
+  .p-information__title::after {
+    position: absolute;
+    content: "";
+    background: url(../../../images/common/red-flower.png) no-repeat center center/contain;
+    overflow: hidden;
+    width: 9.45vw;
+    height: 10.7vw;
+    top: -32%;
+    left: -35%;
+    display: block;
+  }
+}
+@media screen and (max-width: 1439px) and (max-width: 767px) {
+  .p-information__title::after {
+    width: 17.45vw;
+    height: 18.7vw;
+    top: -37%;
+  }
+}
+
+.p-information__title::before {
+  position: absolute;
+  width: 74px;
+  width: 4.625rem;
+  height: 35px;
+  height: 2.1875rem;
+  bottom: -20px;
+  bottom: -1.25rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  content: "基本情報";
+  font-size: 18px;
+  font-size: 1.125rem;
+  color: #1B2F5B;
+}
+
+.p-information__container {
+  text-align: left;
+  padding-top: 46px;
+  padding-top: 2.875rem;
+}
+
+.p-information__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 18px 22px;
+  padding: 1.125rem 1.375rem;
+}
+
+.p-information__items--odd {
+  background: #EDF2F7;
+}
+
+.information__item {
+  width: 180px;
+  width: 11.25rem;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #111;
+  font-size: 18px;
+  font-size: 1.125rem;
+  letter-spacing: 1.25px;
+}
+
+.information__list {
+  width: calc(100% - 180px);
+  font-family: "Noto Sans JP", sans-serif;
+  color: #111;
+  font-size: 18px;
+  font-size: 1.125rem;
+  letter-spacing: 1.25px;
+}
+
+.p-information__items-other {
+  padding-left: 22px;
+  padding-left: 1.375rem;
+  margin-top: -13px;
+  margin-top: -0.8125rem;
+  padding-bottom: 18px;
+  padding-bottom: 1.125rem;
+}
+
 .p-maps {
   background: #fff;
 }
@@ -602,6 +821,11 @@ select::-ms-expand {
       -ms-flex-pack: center;
           justify-content: center;
 }
+@media screen and (max-width: 767px) {
+  .p-maps__lists {
+    font-size: 1.125rem;
+  }
+}
 
 .p-maps__list {
   padding-right: 30px;
@@ -609,8 +833,6 @@ select::-ms-expand {
 }
 
 .p-mv {
-  background: -webkit-gradient(linear, left top, right top, from(#EDF2F7), color-stop(60%, #EDF2F7), color-stop(50%, #fff), to(#fff));
-  background: linear-gradient(90deg, #EDF2F7 0%, #EDF2F7 60%, #fff 50%, #fff 100%);
   padding-top: 140px;
   padding-top: 8.75rem;
   padding-bottom: 100px;
@@ -621,11 +843,22 @@ select::-ms-expand {
   padding-right: 40px;
   padding-right: 2.5rem;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 375px) {
   .p-mv {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
   }
+}
+
+.p-mv::after {
+  background: #EDF2F7;
+  position: absolute;
+  width: 54.6%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  content: "";
+  z-index: -3;
 }
 
 .p-mv__inner {
@@ -741,6 +974,17 @@ select::-ms-expand {
   left: 5%;
   content: "";
   background: #1B2F5B;
+  z-index: -2;
+}
+
+.p-mv__picture ::after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  content: "";
+  background: #fff;
   z-index: -1;
 }
 
@@ -753,33 +997,61 @@ select::-ms-expand {
   content: "";
 }
 
-.p-parallax {
-  height: 600px;
-}
-
-/* 背景画像 */
-.p-parallax::before {
-  background-image: url(../../../images/common/parallax-2.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  content: "";
-  height: 100vh;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: -3;
-}
-
 .p-price {
   padding: 300px 40px 200px;
   padding: 18.75rem 2.5rem 12.5rem;
   background: #fff;
+  text-align: center;
 }
 
 .p-price__title {
   text-align: center;
+  position: relative;
+  display: inline-block;
+}
+
+.p-price__title::after {
+  display: none;
+}
+@media screen and (max-width: 1439px) {
+  .p-price__title::after {
+    position: absolute;
+    content: "";
+    background: url(../../../images/common/flower.png) no-repeat center center/contain;
+    overflow: hidden;
+    width: 7.45vw;
+    height: 8.7vw;
+    top: -24%;
+    left: -75%;
+    display: block;
+    -webkit-transform: rotate(-36deg);
+            transform: rotate(-36deg);
+  }
+}
+@media screen and (max-width: 767px) {
+  .p-price__title::after {
+    width: 13.45vw;
+    height: 15.7vw;
+    top: -10%;
+    left: -70%;
+  }
+}
+
+.p-price__title::before {
+  position: absolute;
+  width: 74px;
+  width: 4.625rem;
+  height: 35px;
+  height: 2.1875rem;
+  bottom: -20px;
+  bottom: -1.25rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  content: "宿泊料金";
+  font-size: 18px;
+  font-size: 1.125rem;
+  color: #1B2F5B;
 }
 
 .p-price__inner {
@@ -790,32 +1062,47 @@ select::-ms-expand {
   max-width: 700px;
   max-width: 43.75rem;
   position: relative;
+  text-align: left;
 }
 
 .p-price__inner::before {
-  position: absolute;
-  width: 140%;
-  height: 140%;
-  top: 50%;
-  -webkit-transform: translateY(-40%);
-          transform: translateY(-40%);
-  left: -100%;
-  content: "";
-  background: url(../../../images/common/price-flower.png) no-repeat center center/contain;
-  overflow: hidden;
+  display: none;
+}
+@media screen and (min-width: 1440px) {
+  .p-price__inner::before {
+    position: absolute;
+    width: 140%;
+    height: 140%;
+    width: 11vw;
+    height: 23.1vw;
+    top: 50%;
+    -webkit-transform: translateY(-40%);
+            transform: translateY(-40%);
+    right: 110%;
+    content: "";
+    background: url(../../../images/common/price-flower.png) no-repeat center center/contain;
+    overflow: hidden;
+    display: block;
+  }
 }
 
 .p-price__inner::after {
-  position: absolute;
-  width: 140%;
-  height: 140%;
-  top: 50%;
-  -webkit-transform: translateY(-40%);
-          transform: translateY(-40%);
-  right: -100%;
-  content: "";
-  background: url(../../../images/common/price-flower.png) no-repeat center center/contain;
-  overflow: hidden;
+  display: none;
+}
+@media screen and (min-width: 1440px) {
+  .p-price__inner::after {
+    position: absolute;
+    width: 11vw;
+    height: 23.1vw;
+    top: 50%;
+    -webkit-transform: translateY(-40%);
+            transform: translateY(-40%);
+    left: 110%;
+    content: "";
+    background: url(../../../images/common/price-flower.png) no-repeat center center/contain;
+    overflow: hidden;
+    display: block;
+  }
 }
 
 .p-price__texts {
@@ -923,6 +1210,7 @@ select::-ms-expand {
   padding-right: 2.5rem;
   padding-top: 120px;
   padding-top: 7.5rem;
+  text-align: center;
 }
 
 .p-rooms::before {
@@ -930,20 +1218,32 @@ select::-ms-expand {
   position: absolute;
   width: 100%;
   height: 200px;
-  top: -15%;
+  height: 7.96vw;
+  width: 100vw;
+  top: -14%;
   left: 0;
   content: "";
   background: url(../../../images/common/wave-up.png) no-repeat center center/contain;
+}
+@media screen and (max-width: 767px) {
+  .p-rooms::before {
+    top: -4%;
+  }
 }
 
 .p-rooms::after {
   position: absolute;
   width: 100%;
   height: 200px;
-  bottom: -20%;
+  bottom: -17%;
   left: 0;
   content: "";
   background: url(../../../images/common/wave-down.png) no-repeat center center/contain;
+}
+@media screen and (max-width: 767px) {
+  .p-rooms::after {
+    bottom: -12%;
+  }
 }
 
 .p-rooms__inner {
@@ -951,21 +1251,82 @@ select::-ms-expand {
   width: 100%;
   max-width: 1120px;
   max-width: 70rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .p-rooms__inner {
+    display: block;
+  }
 }
 
 .p-rooms__title {
   text-align: center;
-  padding-bottom: 80px;
-  padding-bottom: 5rem;
+  margin-bottom: 80px;
+  margin-bottom: 5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.p-rooms__title::after {
+  position: absolute;
+  width: 74px;
+  width: 4.625rem;
+  height: 35px;
+  height: 2.1875rem;
+  bottom: -20px;
+  bottom: -1.25rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  content: "お部屋";
+  font-size: 18px;
+  font-size: 1.125rem;
+  color: #1B2F5B;
+}
+
+.p-rooms__title::before {
+  position: absolute;
+  content: "";
+  background: url(../../../images/common/flower.png) no-repeat center center/contain;
+  overflow: hidden;
+  width: 7.45vw;
+  height: 8.7vw;
+  top: -14%;
+  left: -56%;
+  display: block;
+  -webkit-transform: rotate(-36deg);
+          transform: rotate(-36deg);
+}
+@media screen and (min-width: 1440px) {
+  .p-rooms__title::before {
+    width: 6.45vw;
+    width: 7.6875rem;
+    height: 7.7vw;
+    height: 9.1875rem;
+    top: -32%;
+    left: -67%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .p-rooms__title::before {
+    width: 13.45vw;
+    height: 15.7vw;
+    top: -12%;
+    left: -51%;
+  }
 }
 
 .p-rooms__left {
   width: 60%;
+  position: relative;
   height: auto;
+}
+@media screen and (max-width: 767px) {
+  .p-rooms__left {
+    width: 100%;
+    max-width: 37.5rem;
+    margin: 0 auto;
+  }
 }
 
 .p-rooms__figure {
@@ -973,6 +1334,11 @@ select::-ms-expand {
   width: 100%;
   height: 0;
   padding-top: 59%;
+}
+@media screen and (max-width: 767px) {
+  .p-rooms__figure {
+    padding-top: 51.6%;
+  }
 }
 
 .p-rooms__figure img {
@@ -988,11 +1354,26 @@ select::-ms-expand {
   width: 100%;
   height: 100%;
   top: 50%;
-  -webkit-transform: translateY(-40%);
-          transform: translateY(-40%);
-  right: 7%;
+  -webkit-transform: translateY(-41%);
+          transform: translateY(-41%);
+  left: 86%;
   content: "";
   width: 42.5%;
+  width: 100%;
+  z-index: 2;
+  text-align: left;
+}
+@media screen and (max-width: 767px) {
+  .p-rooms__right {
+    background: #fff;
+    position: static;
+    width: 100%;
+    max-width: 37.5rem;
+    top: 100%;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    left: 0;
+  }
 }
 
 .rooms-texts {
@@ -1027,95 +1408,5 @@ select::-ms-expand {
 .rooms-span-time {
   padding-left: 14px;
   padding-left: 0.875rem;
-}
-
-.p-information {
-  padding: 100px 40px 70px;
-  padding: 6.25rem 2.5rem 4.375rem;
-  background: #fff;
-}
-
-.p-information__inner {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 765px;
-  max-width: 47.8125rem;
-  position: relative;
-}
-
-.p-information__inner::before {
-  position: absolute;
-  width: 265px;
-  width: 16.5625rem;
-  height: 495px;
-  height: 30.9375rem;
-  top: 50%;
-  -webkit-transform: translateY(-40%);
-          transform: translateY(-40%);
-  left: -70%;
-  content: "";
-  background: url(../../../images/common/red-flower.png) no-repeat center center/contain;
-  overflow: hidden;
-}
-
-.p-information__inner::after {
-  position: absolute;
-  width: 364px;
-  width: 22.75rem;
-  height: 412px;
-  height: 25.75rem;
-  width: 50%;
-  height: 50%;
-  top: 0;
-  right: -60%;
-  content: "";
-  background: url(../../../images/common/water.png) no-repeat center center/contain;
-  overflow: hidden;
-}
-
-.p-information__title {
-  text-align: center;
-  padding-bottom: 46px;
-  padding-bottom: 2.875rem;
-}
-
-.p-information__items {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 18px 22px;
-  padding: 1.125rem 1.375rem;
-}
-
-.p-information__items--odd {
-  background: #EDF2F7;
-}
-
-.information__item {
-  width: 180px;
-  width: 11.25rem;
-  font-family: "Noto Sans JP", sans-serif;
-  color: #111;
-  font-size: 18px;
-  font-size: 1.125rem;
-  letter-spacing: 1.25px;
-}
-
-.information__list {
-  width: calc(100% - 180px);
-  font-family: "Noto Sans JP", sans-serif;
-  color: #111;
-  font-size: 18px;
-  font-size: 1.125rem;
-  letter-spacing: 1.25px;
-}
-
-.p-information__items-other {
-  padding-left: 22px;
-  padding-left: 1.375rem;
-  margin-top: -13px;
-  margin-top: -0.8125rem;
-  padding-bottom: 18px;
-  padding-bottom: 1.125rem;
 }
 /*# sourceMappingURL=styles.css.map */

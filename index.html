@@ -15,18 +15,24 @@
   <meta property="og:image" content="" />
   <meta property="og:site_name" content="" />
   <meta property="og:description" content="" />
+ 
   <!-- ファビコン -->
   <link rel="”icon”" href="" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
   <!-- css -->
-
+  <link rel="stylesheet" type="text/css"
+  href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+/>
+<link rel="stylesheet" type="text/css"
+  href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+/>
   <!-- <link rel="stylesheet" href="./css/swiper-bundle8.4.4.min.cssstyles.css"> -->
   <link rel="stylesheet"
   href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
 />
   <link rel="stylesheet" href="./css/styles.css">
   <!-- JavaScript -->
-  <script sec="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <!-- <script sec="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script> -->
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <!-- <script defer src="./js/swiper-bundle8.4.4.min.js"></script> -->
   <script defer src="./js/script.js"></script>
@@ -54,19 +60,31 @@
         <br>長期・短期・素泊まり大歓迎です！</p>
 
      </div>
-     <div class="p-mv__images">
+     <!-- <div class="p-mv__images">
       <picture class="p-mv__picture">
-        <source media="(min-width: 768px)" srcset="images/common/mv-1.png">
-        <img src="images/common/mv-2.png" alt="ペンションわくみや">
+        <source media="(min-width: 768px)" srcset="images/common/mv-1.jpg">
+        <img src="images/common/mv-2.jpg" alt="ペンションわくみや">
       </picture>
-    </div>
+    </div> -->
+     <!-- koko -->
      
+     <div class="p-mv__images">
+       <picture class="p-mv__picture">
+         <source media="(min-width: 768px)" srcset="images/common/mv-1.jpg">
+         <div class="slider">
+           <img src="images/common/mv-1.jpg" alt="ペンションわくみや">
+           <img src="images/common/mv-2.jpg" alt="ペンションわくみや">
+           <img src="images/common/mv-3.jpg" alt="ペンションわくみや">
+          </picture>
+        </div>
+    </div>
+     <!-- koko -->
    </div>
  </section>
  <section class="p-concept">
    <div class="p-concept__inner">
      <div class="p-concept__left">
-       <h2 class="p-concept__title c-section__title">コンセプト</h2>
+       <!-- <h2 class="p-concept__title c-section__title">コンセプト</h2> -->
        <div class="p-concept__text">
         当館は宮古空港より車で4分の距離にあり、市街地ビーチ、ゴルフ場
         などの娯楽施設や観光各所へ車で約5分～30分という恵まれた環境に
@@ -88,31 +106,31 @@
    </div>
  </section>
  <section class="p-rooms">
-   <div class="p-rooms__title c-section__title">お部屋</div>
+   <div class="p-rooms__title c-section__title">Rooms</div>
    <div class="p-rooms__inner">
      <div class="p-rooms__left">
        <figure class="p-rooms__figure">
          <img src="images/common/rooms.jpg" alt="室内写真" loading="lazy" width="393" height="666">
        </figure>
-     </div>
-     <div class="p-rooms__right">
-      <div class="p-rooms__right-top rooms-texts">
-        <ul class="rooms__text-top">
-          <li class="rooms__list">本館・別館 <span class="rooms-span-top">全13室</span> </li>
-          <li class="rooms__list">本館5部屋 <span class="rooms-span-middle">（２階）</span> </li>
-          <li class="rooms__list">別館8部屋 <span class="rooms-span-middle">（２階・3階）</span> </li>
-       </ul>
-        <ul class="rooms__text-bottom">
-          <li class="rooms__list">食堂 本館１階 </li>
-          <li class="rooms__list">朝食 <span class="rooms-span-time"> ※7:30までにご入店下さい</span> </li>
-          <li class="rooms__list">夕食 <span>※19:30までにご入店下さい</span> </li>
-       </ul>
+       <div class="p-rooms__right">
+         <div class="p-rooms__right-top rooms-texts">
+           <ul class="rooms__text-top">
+             <li class="rooms__list">本館・別館 <span class="rooms-span-top">全13室</span> </li>
+             <li class="rooms__list">本館5部屋 <span class="rooms-span-middle">（２階）</span> </li>
+             <li class="rooms__list">別館8部屋 <span class="rooms-span-middle">（２階・3階）</span> </li>
+            </ul>
+            <ul class="rooms__text-bottom">
+              <li class="rooms__list">食堂 本館１階 </li>
+              <li class="rooms__list">朝食 <span class="rooms-span-time"> ※7:30までにご入店下さい</span> </li>
+              <li class="rooms__list">夕食 <span>※19:30までにご入店下さい</span> </li>
+            </ul>
+          </div>
+        </div>
       </div>
-     </div>
    </div>
  </section>
  <section class="p-price">
-  <h2 class="p-price__title c-section__title">宿泊料金</h2>
+  <h2 class="p-price__title c-section__title">Price</h2>
    <div class="p-price__inner">
      <div class="p-price__texts">
        <h3 class="price__sub-title">
@@ -167,7 +185,7 @@
         <li class="text-attention__list">※記載料金は全てお一人様の料金です。</li>
       </ul>
      </div>
-   </div>
+  
  </section>
  <section class="p-parallax">
 
@@ -175,7 +193,7 @@
  <section class="p-information">
    <div class="p-information__inner">
      <div class="p-information__title c-section__title">
-       基本情報
+      Information
      </div>
      <div class="p-information__container">
        <div class="p-information__items information__items p-information__items--odd">
@@ -295,6 +313,11 @@
     </small>
   </div>
 </footer>
-
+<script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+      >
+    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>

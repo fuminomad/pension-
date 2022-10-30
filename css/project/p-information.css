@@ -51,17 +51,21 @@ body {
 
 .p-information__inner::before {
   position: absolute;
-  width: 265px;
-  width: 16.5625rem;
-  height: 495px;
-  height: 30.9375rem;
+  width: 13.8vw;
+  height: 25.7vw;
   top: 50%;
   -webkit-transform: translateY(-40%);
           transform: translateY(-40%);
-  left: -70%;
+  right: 100%;
+  left: calc(50% - 41.125rem);
   content: "";
   background: url(../../../images/common/red-flower.png) no-repeat center center/contain;
   overflow: hidden;
+}
+@media screen and (max-width: 767px) {
+  .p-information__inner::before {
+    display: none;
+  }
 }
 
 .p-information__inner::after {
@@ -70,13 +74,19 @@ body {
   width: 22.75rem;
   height: 412px;
   height: 25.75rem;
-  width: 50%;
-  height: 50%;
+  width: 18.9vw;
+  height: 21.4vw;
   top: 0;
-  right: -60%;
+  right: calc(50% - 41.125rem);
+  left: 100%;
   content: "";
   background: url(../../../images/common/water.png) no-repeat center center/contain;
   overflow: hidden;
+}
+@media screen and (max-width: 767px) {
+  .p-information__inner::after {
+    display: none;
+  }
 }
 
 .p-information__title {

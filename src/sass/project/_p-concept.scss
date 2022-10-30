@@ -3,34 +3,48 @@
 .p-concept{
 padding-top: rem(70);
 padding: rem(70) rem(40) rem(400);
-background: $white;
+
 }
 .p-concept__inner{
 display: flex;
 width: 100%;
 max-width: 1350px;
 margin: 0 auto;
+@include mq(md){
+    flex-direction:column;
+    }
 }
+
 .p-concept__title{
 
 }
 
 .p-concept__left{
-padding-top: rem(76);
 width: 45%;
 text-align: center;
 position: relative;
-min-width: rem(545);
+max-width: rem(545);
+padding-top: rem(40);
+@include mq(md){
+  margin: 0 auto;
+  width: 100%;
+  max-width: rem(600);
+    }
 }
 .p-concept__left::after{
     position: absolute;
     width: rem(379);
     height:rem(264);
-    bottom: -15%;
-     left:5%;
+    bottom: 0%;
+     left:calc(50% - 45% );
     content: "";
      background: url(../../../images/common/blue-sky.png)no-repeat center center / contain;
+     @include mq(md){
+        display: none;
+        }
     }
+
+
 .p-concept__text{
 padding-top: rem(80);
 padding-left: 5%;
@@ -41,9 +55,13 @@ line-height: 1.7;
 padding-top: rem(60);
 }
 
+
 .p-concept__right{
 padding-top: rem(50);    
 width: 50%;
+@include mq(md){
+    width: 100%;
+      }
 }
 .p-concept__image{
     width: 75%;
@@ -62,12 +80,4 @@ height: 0;
     width: 100%;
     height: 100%;
 }
-.p-concept__figure::after{
-    position: absolute;
-    width: rem(380);
-    height:rem(298);
-    bottom: -15%;
-    right: -40%;;
-    content: "";
-     background: url(../../../images/common/concept-img-small.jpg)no-repeat center center / contain;
-}
+

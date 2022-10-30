@@ -3,9 +3,44 @@
 .p-price{
 padding: rem(300) rem(40) rem(200);
 background: $white;
+text-align: center;
 }
 .p-price__title{
 text-align: center;
+position: relative;
+display: inline-block;
+}
+.p-price__title::after{
+    display: none;
+    @include mq(inner){
+    position: absolute;
+    content: "";
+    background: url(../../../images/common/flower.png)no-repeat center center / contain; 
+    overflow: hidden;
+    width: 7.45vw;
+    height:8.7vw;
+    top: -24%;
+    left: -75%;
+    display: block;
+    transform: rotate(-36deg)
+    }
+    @include mq(md){
+        width: 13.45vw;
+        height: 15.7vw;
+        top: -10%;
+        left: -70%;
+        }
+}
+.p-price__title::before{
+    position: absolute;
+    width: rem(74);
+    height:rem(35);
+     bottom: rem(-20);
+     left: 50%;
+     transform: translateX(-50%);
+    content: "宿泊料金";
+    font-size: rem(18);
+    color: $navy;
 }
 .p-price__inner{
     padding-top:rem(100);
@@ -13,28 +48,39 @@ text-align: center;
     margin: 0 auto;
 max-width: rem(700);
 position: relative;
+text-align: left;
 }
 .p-price__inner::before{
+    display: none;
+    @include mq(xl){
     position: absolute;
     width: 140%;
     height:140%;
+    width:11.0vw;
+    height: 23.1vw;
     top: 50%;
     transform: translateY(-40%);
-    left: -100%;
+    right: 110%;
     content: "";
     background: url(../../../images/common/price-flower.png)no-repeat center center / contain; 
     overflow: hidden;
+    display: block;
+        }
 }
 .p-price__inner::after{
+    display: none;
+    @include mq(xl){
     position: absolute;
-    width: 140%;
-    height:140%;
+    width:11.0vw;
+    height: 23.1vw;
     top: 50%;
     transform: translateY(-40%);
-     right: -100%;
+    left: 110%;
     content: "";
     background: url(../../../images/common/price-flower.png)no-repeat center center / contain; 
     overflow: hidden;
+    display: block;
+        }
 }
 .p-price__texts{
 padding-bottom: rem(10);
