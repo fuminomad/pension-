@@ -43,42 +43,66 @@
       <div class="p-header__logo">
         ペンション湧泉家
       </div>
+      <div class="hamburger-menus"></div>
+    <a class="hamburger-menu menu">
+      <span class="menu__line menu__line--top"></span>
+      <span class="menu__line menu__line--center"></span>
+      <span class="menu__line menu__line--bottom"></span>
+    </a>
+    <nav class="gnav">
+      <div class="gnav__wrap">
+        <ul class="gnav__menu">
+          <li class="gnav__menu__item gnav__menu__item--1st"><a href="#rooms">rooms</a></li>
+          <li class="gnav__menu__item gnav__menu__item--1st"><a href="#price">price</a></li>
+          <li class="gnav__menu__item gnav__menu__item--1st"><a href="#information">information</a></li>
+          <li class="gnav__menu__item gnav__menu__item--1st"><a href="#maps">maps</a></li>
+          
+        </ul>
+      </div>
+    </nav>
+    
+      <div class="p-header__logo--sp">
+        <figure class="p-header__logo-figure">
+          <img src="/images/common/logo-navy.svg" alt="ペンションわくみや"  width="124" height="73">
+        </figure>
+      </div>
       <div class="p-header__tel">
         <!-- 電話番号テスト後変更 -->
-        <span class="p-header__tel-icon"><img src="images/common/Icon-phone.png" alt="電話のアイコン"></span>
-        <a href="tel:090-2752-2868">0980-76-3300</a>
+  
+          <picture class="p-header__icon">
+            <source media="(max-width: 768px)" srcset="images/common/tel.svg">
+            <img src="images/common/tel-pc.svg" alt="電話のアイコン">
+          <a href="tel:090-2752-2868"></a>
+
+          </picture>
       </div>
+      <!-- <div class="p-header_nav-background"></div> -->
     </div>
  </header>
  <section class="p-mv">
    <div class="p-mv__inner">
-     <div class="p-mv__titles">
-       <h1 class="p-mv__title">
-        宮古空港より車で4分の恵まれた環境の湧泉家
-       </h1>
-       <p class="p-mv__text">宮古島滞在の拠点としてご利用ください
-        <br>長期・短期・素泊まり大歓迎です！</p>
-
-     </div>
-     <!-- <div class="p-mv__images">
-      <picture class="p-mv__picture">
-        <source media="(min-width: 768px)" srcset="images/common/mv-1.jpg">
-        <img src="images/common/mv-2.jpg" alt="ペンションわくみや">
-      </picture>
-    </div> -->
-     <!-- koko -->
+     
+   
      
      <div class="p-mv__images">
+      <div class="p-mv__titles">
+        <h1 class="p-mv__title">
+         宮古空港より車で4分の<br class="is-sp">恵まれた環境の湧泉家
+        </h1>
+        <p class="p-mv__text">宮古島滞在の拠点としてご利用ください
+         <br>長期・短期・素泊まり大歓迎です！</p>
+ 
+      </div>
        <picture class="p-mv__picture">
-         <source media="(min-width: 768px)" srcset="images/common/mv-1.jpg">
+         <!-- <source media="(min-width: 768px)" srcset="images/common/mv-1.jpg"> -->
          <div class="slider">
            <img src="images/common/mv-1.jpg" alt="ペンションわくみや">
-           <img src="images/common/mv-2.jpg" alt="ペンションわくみや">
-           <img src="images/common/mv-3.jpg" alt="ペンションわくみや">
+           <img src="images/common/mv-2.jpg" alt="海の画像">
+           <img src="images/common/mv-3.jpg" alt="夕日の画像">
           </picture>
         </div>
     </div>
-     <!-- koko -->
+    
    </div>
  </section>
  <section class="p-concept">
@@ -106,7 +130,7 @@
    </div>
  </section>
  <section class="p-rooms">
-   <div class="p-rooms__title c-section__title">Rooms</div>
+   <div class="p-rooms__title c-section__title" id="rooms">Rooms</div>
    <div class="p-rooms__inner">
      <div class="p-rooms__left">
        <figure class="p-rooms__figure">
@@ -115,14 +139,14 @@
        <div class="p-rooms__right">
          <div class="p-rooms__right-top rooms-texts">
            <ul class="rooms__text-top">
-             <li class="rooms__list">本館・別館 <span class="rooms-span-top">全13室</span> </li>
+             <li class="rooms__list--top">本館・別館 <span class="rooms-span-top">全13室</span> </li>
              <li class="rooms__list">本館5部屋 <span class="rooms-span-middle">（２階）</span> </li>
              <li class="rooms__list">別館8部屋 <span class="rooms-span-middle">（２階・3階）</span> </li>
             </ul>
             <ul class="rooms__text-bottom">
-              <li class="rooms__list">食堂 本館１階 </li>
-              <li class="rooms__list">朝食 <span class="rooms-span-time"> ※7:30までにご入店下さい</span> </li>
-              <li class="rooms__list">夕食 <span>※19:30までにご入店下さい</span> </li>
+              <li class="rooms__list--top">食堂 本館１階 </li>
+              <li class="rooms__list">朝食 <br class="is-md"> <span class="rooms-span-time"> ※7:30までにご入店下さい。</span> </li>
+              <li class="rooms__list">夕食 <br class="is-md">  <span>※19:30までにご入店下さい。</span> </li>
             </ul>
           </div>
         </div>
@@ -130,7 +154,7 @@
    </div>
  </section>
  <section class="p-price">
-  <h2 class="p-price__title c-section__title">Price</h2>
+  <h2 class="p-price__title c-section__title" id="price">Price</h2>
    <div class="p-price__inner">
      <div class="p-price__texts">
        <h3 class="price__sub-title">
@@ -141,11 +165,12 @@
             短期(2泊まで）
           </div>
           <div class="price-center--center">
-            1泊 2食付き(月〜土) 
-          </div>
-          <div class="price-center--right">
-            5,500円(税込 6,050円) 
-          </div>
+                1泊 2食付き(月〜土) 
+              </div>
+              <div class="price-center--right">
+                5,500円(税込 6,050円) 
+              </div>
+         
         </div>
         <div class="p-price__text--middle price__texts">
           
@@ -158,26 +183,71 @@
         </div>
        </div>
        <div class="p-price__text--top price__texts">
-          <div class="price__text--left">
+       
+        <div class="price__text--left">
             長期(3泊以上)
           </div>
+          
           <div class="price-center--center">
             1泊 2食付き(月〜土) 
           </div>
           <div class="price-center--right">
             5,000円(税込 5,500円)
           </div>
-         </div>
+          </div>
+          
+        
          <div class="p-price__text--middle price__texts">
           
           <div class="price-center--left-center">
             素泊まり及び日曜日
           </div>
           <div class="price-center--right">
-            3,500円(税込 4,400円) 
+            3,500円(税込 3,850円) 
           </div>
         </div>
      </div>
+     <!-- sp -->
+     <div class="p-price__texts--sp">
+      <h3 class="price__sub-title">
+       別館宿泊料
+      </h3>
+      <div class="price__text--sp price__text--1st">
+        <div class="price__text--sp-left">
+            <div class="price__text--left">
+              短期(2泊まで）
+            </div>
+        </div>
+        <div class="price__text--sp-right">
+            <div class="price-center--sp-center">
+              1泊 2食付き(月〜土) <span class="sp-price"> 5,500円(税込 6,050円) </span>
+            </div>
+      </div> 
+        <div class="price__text--sp-right">
+            <div class="price-center--sp-center">
+              素泊まり及び日曜日<span class="sp-price">4,000円(税込 4,400円)</span>
+            </div>
+      </div> 
+      <div class="price__text--sp">
+        <div class="price__text--sp-left">
+            <div class="price__text--left">
+              長期(3泊以上)
+            </div>
+        </div>
+        <div class="price__text--sp-right">
+            <div class="price-center--sp-center">
+              1泊 2食付き(月〜土)<span class="sp-price">5,000円(税込 5,500円)</span>
+            </div>
+      </div> 
+        <div class="price__text--sp-right">
+            <div class="price-center--sp-center">
+              素泊まり及び日曜日<span class="sp-price">3,500円(税込 3,850円)</span>
+            </div>
+      </div> 
+      
+     </div>
+    </div>
+
      <div class="p-price__text--bottom text-attentions">
       <ul class="text-attention">
         <li class="text-attention__list">※本館宿泊料につきましては担当までお問い合わせください。</li>
@@ -188,11 +258,13 @@
   
  </section>
  <section class="p-parallax">
-
+  <div class="parallax__box">
+    <div class="parallax__image"></div>
+  </div>
  </section>
  <section class="p-information">
    <div class="p-information__inner">
-     <div class="p-information__title c-section__title">
+     <div class="p-information__title c-section__title" id="information">
       Information
      </div>
      <div class="p-information__container">
@@ -201,7 +273,7 @@
           住所
          </div>
          <div class="information__list">
-          〒906 - 0301 沖縄県宮古島市下地川満 126
+          〒906 - 0301 <br class="is-500"> 沖縄県宮古島市下地川満 126
          </div>
        </div>
        <div class="p-information__items information__items">
@@ -230,10 +302,10 @@
        </div>
        <div class="p-information__items information__items p-information__items--odd">
          <div class="information__item">
-          チェックイン<br>チェックアウト
+          チェックイン <span class="is-md">10:00 <br class="is-500">(最終チェックイン 19:00)</span> <br>チェックアウト<span class="is-md"> 11:00</span>
          </div>
-         <div class="information__list">
-          10:00 (最終チェックイン 19:00)<br>11:00
+         <div class="information__list is-pc">
+          10:00  (最終チェックイン 19:00)<br> 11:00
          </div>
        </div>
        <div class="p-information__items-other p-information__items--odd">
@@ -273,7 +345,7 @@
       </div>
   </div>
 </section>
-<section class="p-maps">
+<section class="p-maps" id="maps">
 <div class="p-maps__inner">
   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3622.9679017967674!2d125.28277611471543!3d24.762289655284174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34f45591755b4013%3A0x26d5e8d157d4712f!2z44GX44G-6aOf5aCCIOa5p-azieWutu-8iOOCj-OBj-OBv-OChO-8iQ!5e0!3m2!1sja!2sjp!4v1667064471342!5m2!1sja!2sjp" width="1920" height="626" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
@@ -286,10 +358,6 @@
    <li class="p-maps__list">伊良部大橋</li>
    <li class="p-maps__list">来間島</li>
    <li class="p-maps__list">島の駅みやこ</li>
-   
-  </ul>
-  <ul class="p-maps__lists">
-  
    <li class="p-maps__list">松が原ゴルフ場</li>
    <li class="p-maps__list">エメラルドコーストゴルフリンクス</li>
   </ul>
