@@ -2,16 +2,15 @@
 
 .slick-img img {
     width: 100%;
-  }
-  @keyframes zoomUp {
+}
+@keyframes zoomUp {
     0% {
-      transform: scale(1);
+        transform: scale(1);
     }
     100% {
-      transform: scale(1.15); /* 拡大率 */
+        transform: scale(1.15); /* 拡大率 */
     }
-  }
-  .add-animation {
+}
+.add-animation {
     animation: zoomUp 10s linear 0s normal both;
-  }
-  
+}

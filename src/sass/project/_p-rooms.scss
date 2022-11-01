@@ -1,130 +1,135 @@
 @use "global" as *;
-.p-rooms{
-// margin-top: rem(180);
-// margin-bottom: rem(100);    
-background: $light-blue;
-padding-bottom: rem(120);
-position: relative;
-padding-left: rem(40);
-padding-right: rem(40);
-padding-top: rem(120);
-text-align: center;
+.p-rooms {
+    background: $light-blue;
+    padding-bottom: rem(120);
+    position: relative;
+    padding-left: rem(40);
+    padding-right: rem(40);
+    padding-top: rem(80);
+    text-align: center;
 }
-.p-rooms::before{
+.p-rooms::before {
     z-index: 1;
     position: absolute;
     width: 100%;
-    height:200px;
+    height: 200px;
     height: 7.96vw;
     width: 100vw;
-    top: -14%;
+    top: -13%;
     left: 0;
     content: "";
-    background: url(../../../images/common/wave-up.png)no-repeat center center / contain;
-@include mq(md){
-    top: -4%;
+    background: url(../images/common/wave-up.png) no-repeat center center / contain;
+    @include mq(md) {
+        top: -4%;
+    }
+    @media screen and (max-width: 500px) {
+        top: -2.5%;
     }
 }
-
-.p-rooms::after{
+.p-rooms::after {
     position: absolute;
     width: 100%;
-    height:200px;
-    bottom: -17%;
+    height: 200px;
+    bottom: -18%;
     left: 0;
     content: "";
-    background: url(../../../images/common/wave-down.png)no-repeat center center / contain;
-@include mq(md){
-    bottom: -12%;
-    
+    background: url(../images/common/wave-down.png) no-repeat center center / contain;
+    @include mq(lg) {
+        bottom: -24%;
+    }
+    @include mq(md) {
+        bottom: -11%;
+    }
+    @media screen and (max-width: 415px) {
+        bottom: -10%;
     }
 }
-.p-rooms__inner{
-margin: 0 auto;
-width: 100%;
-max-width: rem(1120);
-text-align: center;
-
-@include mq(md){
-   display: block;
+.p-rooms__inner {
+    margin: 0 auto;
+    width: 100%;
+    max-width: rem(1120);
+    text-align: center;
+    @include mq(md) {
+        display: block;
     }
 }
-.p-rooms__title{
-text-align: center;
-margin-bottom: rem(80);
-position: relative;
-display: inline-block;
+.p-rooms__title {
+    text-align: center;
+    margin-bottom: rem(80);
+    position: relative;
+    display: inline-block;
 }
-.p-rooms__title::after{
+.p-rooms__title::after {
     position: absolute;
     width: rem(74);
-    height:rem(35);
-     bottom: rem(-20);
-     left: 50%;
-     transform: translateX(-50%);
+    height: rem(35);
+    bottom: rem(-20);
+    left: 50%;
+    transform: translateX(-50%);
     content: "お部屋";
     font-size: rem(18);
     color: $navy;
+    @include mq(md) {
+        font-size: rem(16);
+        bottom: rem(-22);
+    }
 }
-.p-rooms__title::before{
-    
+.p-rooms__title::before {
     position: absolute;
     content: "";
-    background: url(../../../images/common/flower.png)no-repeat center center / contain; 
+    background: url(../images/common/flower.png) no-repeat center center / contain;
     overflow: hidden;
     width: 7.45vw;
-    height:8.7vw;
+    height: 8.7vw;
     top: -14%;
     left: -56%;
     display: block;
     transform: rotate(-36deg);
-    @include mq(xl){
+    @include mq(xl) {
         width: 6.45vw;
         width: rem(123);
-    height:7.7vw;
-    height: rem(147);
-    top: -32%;
-    left: -67%;
-        }
-    @include mq(md){
-        width: 13.45vw;
-        height: 15.7vw;
-        top: -12%;
-        left: -51%;
-        }
-}
-.p-rooms__left{
-width: 60%;
-position: relative;
-height: auto;
-@include mq(md){
-    width: 100%;
-    max-width: rem(600);
-    margin: 0 auto;
+        height: 7.7vw;
+        height: rem(147);
+        top: -32%;
+        left: -67%;
+    }
+    @include mq(md) {
+        width: 88px;
+        height: 90px;
+        top: -6px;
+        left: -87px;
     }
 }
-.p-rooms__figure{
-
+.p-rooms__left {
+    width: 60%;
+    position: relative;
+    height: auto;
+    @include mq(md) {
+        width: 100%;
+        max-width: rem(600);
+        margin: 0 auto;
+    }
+}
+.p-rooms__figure {
     position: relative;
     width: 100%;
     height: 0;
-    padding-top: 59.0% ;
-    @include mq(md){
+    padding-top: 59%;
+    @include mq(md) {
         padding-top: 51.6%;
-        }
+    }
 }
-.p-rooms__figure img{
+.p-rooms__figure img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
 }
-
-.p-rooms__right{
+.p-rooms__right {
     position: absolute;
     width: 100%;
-    height:100%;
+    height: 100%;
     top: 50%;
     transform: translateY(-41%);
     left: 86%;
@@ -133,47 +138,63 @@ height: auto;
     width: 100%;
     z-index: 2;
     text-align: left;
-    @include mq(md){
+    @include mq(md) {
         background: $white;
         position: static;
         width: 100%;
         max-width: rem(600);
-        // right: 0;
-        // left: 0;
-        // top: 100%;
+
         top: 100%;
         transform: translateY(0%);
         left: 0;
-        
-        
-        
-        }
+
+        text-align: center;
+    }
 }
-.rooms-texts{
+.rooms-texts {
     background: $white;
     display: inline-block;
-    padding: rem(40)rem(60)rem(40)rem(60);
+    padding: rem(40) rem(60) rem(40) rem(60);
+    @include mq(md) {
+        text-align: left;
+    }
+    @media screen and (max-width: 600px) {
+        padding: rem(40) rem(20) rem(40) rem(20);
+        font-size: rem(16);
 
+        text-align: left;
+    }
 }
-.rooms__text-top{
-   
-   
-}
-.rooms__text-bottom{
+
+.rooms__text-bottom {
     padding-top: rem(80);
+    @include mq(md) {
+        padding-top: rem(50);
+    }
 }
-.rooms__list{
+.rooms__list--top {
     font-family: $base-font-family;
     font-size: rem(18);
     letter-spacing: 5px;
+    @include mq(md) {
+        letter-spacing: 0;
+        font-weight: $bold;
+    }
 }
-.rooms-span-top{
+.rooms__list {
+    font-family: $base-font-family;
+    font-size: rem(18);
+    letter-spacing: 5px;
+    @include mq(md) {
+        letter-spacing: 0;
+    }
+}
+.rooms-span-top {
     padding-left: rem(10);
 }
-.rooms-span-middle{
+.rooms-span-middle {
     padding-left: rem(8);
 }
-.rooms-span-time{
-  padding-left: rem(14);  
+.rooms-span-time {
+    padding-left: rem(14);
 }
-

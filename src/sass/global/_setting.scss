@@ -111,3 +111,24 @@ $mediaquerys: (
     display: none;
   }
 }
+// タプレット以下表示
+.is-md{
+  display: none;
+  @include mq("md"){
+    display: block;
+  }
+}
+// 415px以下表示
+.is-sp{
+  display: none;
+  @media screen and (max-width: 415px){
+  display: block;
+  }
+}
+// 500px以下表示
+.is-500{
+  display: none;
+  @media screen and (max-width: 500px){
+  display: block;
+  }
+}

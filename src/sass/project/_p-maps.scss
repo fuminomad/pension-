@@ -1,43 +1,49 @@
 @use "global" as *;
-.p-maps{
-background: $white;
+.p-maps {
+    background: $white;
 }
 
-.p-maps__inner{
+.p-maps__inner {
     width: 100%;
     position: relative;
     padding-top: 32.6%;
- 
+    @include mq(md) {
+        padding-top: 80.6%;
+    }
 }
-.p-maps__inner iframe{
+.p-maps__inner iframe {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
 }
-.p-maps__titles{
-padding-top: rem(50);
-padding-bottom: rem(80);
+.p-maps__titles {
+    padding-top: rem(50);
+    padding-bottom: rem(80);
+    width: 80%;
+    max-width: rem(700);
+    margin: 0 auto;
 }
-.p-maps__title{
+.p-maps__title {
     font-size: rem(26);
     font-family: $base-font-family;
     color: $black;
-   text-align: center;
-   padding-bottom: rem(20);
+    text-align: center;
+    padding-bottom: rem(20);
 }
-.p-maps__lists{
+.p-maps__lists {
     font-size: rem(26);
     font-family: $base-font-family;
     color: $navy;
     font-weight: $bold;
     display: flex;
     justify-content: center;
-    @include mq(md){
-        font-size: rem(18);
-        }
+    flex-wrap: wrap;
+    @include mq(md) {
+        font-size: rem(16);
+    }
 }
-.p-maps__list{
-padding-right: rem(30);
+.p-maps__list {
+    padding-right: rem(30);
 }

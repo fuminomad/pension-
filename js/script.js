@@ -81,6 +81,24 @@ $(function () {
     });
 });
 // slick
+jQuery('.p-header_nav ul li a[href]').on('click', function (event) {
+	jQuery('.p-header_hamburger').trigger('click');
+});
+
+(function ($) {
+
+	$('.menu ,.gnav').on('click', function () {
+		$('.menu__line').toggleClass('active');
+		$('.p-header__inner').toggleClass('active');
+		$('.p-header-logo').toggleClass('active');
+		$('.p-header').toggleClass('active');
+		$('.gnav').fadeToggle();
+		$('.p-header_nav-background').removeClass('open');
+	});
+
+
+
+})(jQuery);
 
 });
 

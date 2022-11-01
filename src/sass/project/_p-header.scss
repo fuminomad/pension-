@@ -1,46 +1,83 @@
 @use "global" as *;
-.p-header{
-height: rem(100);
-background: $white;
-}
-.p-header__inner{
-display: flex;
-justify-content: center;
-position: relative;
-@include mq(md){
-    justify-content: space-between;
+.p-header {
+    height: rem(100);
+    background: $white;
+    width: 100%;
+    @include mq(md) {
+        top: 0;
+        left: 0;
+        height: rem(80);
+        position: fixed;
+        z-index: 999;
     }
 }
-.p-header__logo{
-margin: 0;
-line-height: rem(100);
-font-size: rem(24);
-color: $navy;
-font-weight: $bold;
-font-family: $base-font-family;
-@include mq(md){
-    padding-left: rem(40);
-    }
-}
-.p-header__tel{
+.p-header__inner {
     display: flex;
-   margin-top: rem(23);
-   position: absolute;
-   right: 0;
-   margin-right: rem(100);
-   padding: rem(10) rem(24);
-   border: solid 2px $navy;
-   @include mq(md){
-       margin-right: 40px;
-       
-       }
-  }
-.p-header__tel a{
+    position: relative;
+
+    @include mq(md) {
+        justify-content: space-between;
+        justify-content: center;
+    }
+}
+.p-header__logo {
+    margin: 0;
+    font-size: rem(24);
+    color: $navy;
+    font-weight: $bold;
+    font-family: $base-font-family;
+    padding-left: rem(100);
+    padding-top: rem(20);
+    @include mq(md) {
+        display: none;
+    }
+}
+.p-header__logo--sp {
+    display: none;
+    @include mq(md) {
+        display: block;
+        padding-right: rem(21);
+    }
+}
+.p-header__logo-figure {
+    width: 124px;
+    height: 73px;
+}
+.p-header__logo-figure img {
+    width: 100%;
+    height: 100%;
+}
+.p-header__icon img {
+    width: rem(255);
+    height: rem(55);
+    @include mq(md) {
+        width: rem(33);
+        height: rem(32);
+    }
+}
+.p-header__icon source {
+    width: rem(32);
+    height: rem(35);
+}
+
+.p-header__tel {
+    display: flex;
+    padding-top: rem(15);
+    position: absolute;
+    right: 0;
+    margin-right: rem(100);
+
+    @include mq(md) {
+        margin-right: 40px;
+        padding-top: rem(18);
+    }
+}
+.p-header__tel a {
     font-size: rem(24);
     color: $navy;
     font-family: $base-font-family;
 }
-.p-header__tel-icon{
+.p-header__tel-icon {
     display: inline-block;
     padding-right: rem(10);
     width: rem(36);

@@ -1,0 +1,87 @@
+@use "global" as *;
+.gnav {
+    background: $navy;
+    display: none;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: 10000;
+    top: 0;
+}
+.gnav__wrap {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+}
+.gnav__menu {
+    text-align: center;
+}
+.gnav__menu__item {
+    margin: 40px 0;
+}
+.gnav__menu__item a {
+    color: $white;
+    font-size: rem(36);
+    font-weight: bold;
+    padding: 40px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.gnav__menu__item a:hover {
+    color: #666;
+}
+.gnav__menu__item:first-child a {
+    position: relative;
+}
+.gnav__menu__item:first-child a::after {
+    position: absolute;
+    content: "お部屋";
+    font-size: rem(14);
+    bottom: rem(24);
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    font-family: $base-font-family;
+}
+.gnav__menu__item:nth-child(2) a {
+    position: relative;
+}
+.gnav__menu__item:nth-child(2) a::after {
+    position: absolute;
+    content: "宿泊料金";
+    font-size: rem(14);
+    bottom: rem(24);
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    font-family: $base-font-family;
+}
+.gnav__menu__item:nth-child(3) a {
+    position: relative;
+}
+.gnav__menu__item:nth-child(3) a::after {
+    position: absolute;
+    content: "基本情報";
+    font-size: rem(14);
+    bottom: rem(24);
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    font-family: $base-font-family;
+}
+.gnav__menu__item:nth-child(4) a {
+    position: relative;
+}
+.gnav__menu__item:nth-child(4) a::after {
+    position: absolute;
+    content: "地図";
+    font-size: rem(14);
+    bottom: rem(20);
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    font-family: $base-font-family;
+}

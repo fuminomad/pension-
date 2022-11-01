@@ -4,4 +4,7 @@ font-size: rem(55);
 color: $navy;
 font-family: $base-font-family;
 font-weight: $bold;
+@include mq(md){
+    font-size: rem(42);
+    }
 }

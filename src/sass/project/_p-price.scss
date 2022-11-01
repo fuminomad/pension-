@@ -1,157 +1,216 @@
 @use "global" as *;
-
-.p-price{
-padding: rem(300) rem(40) rem(200);
-background: $white;
-text-align: center;
-}
-.p-price__title{
-text-align: center;
-position: relative;
-display: inline-block;
-}
-.p-price__title::after{
-    display: none;
-    @include mq(inner){
-    position: absolute;
-    content: "";
-    background: url(../../../images/common/flower.png)no-repeat center center / contain; 
-    overflow: hidden;
-    width: 7.45vw;
-    height:8.7vw;
-    top: -24%;
-    left: -75%;
-    display: block;
-    transform: rotate(-36deg)
+.p-price {
+    padding: rem(300) rem(40) rem(200);
+    background: $white;
+    text-align: center;
+    @include mq(md) {
+        padding: rem(150) rem(20) rem(100);
     }
-    @include mq(md){
-        width: 13.45vw;
-        height: 15.7vw;
-        top: -10%;
-        left: -70%;
-        }
 }
-.p-price__title::before{
+.p-price__title {
+    text-align: center;
+    position: relative;
+    display: inline-block;
+}
+.p-price__title::after {
+    display: none;
+    @include mq(inner) {
+        position: absolute;
+        content: "";
+        background: url(../images/common/flower.png) no-repeat center center / contain;
+        overflow: hidden;
+        width: 7.45vw;
+        height: 8.7vw;
+        top: -24%;
+        left: -75%;
+        display: block;
+        transform: rotate(-36deg);
+    }
+    @include mq(md) {
+        width: 88px;
+        height: 90px;
+        top: -5px;
+        left: -87px;
+    }
+}
+.p-price__title::before {
     position: absolute;
     width: rem(74);
-    height:rem(35);
-     bottom: rem(-20);
-     left: 50%;
-     transform: translateX(-50%);
+    height: rem(35);
+    bottom: rem(-20);
+    left: 50%;
+    transform: translateX(-50%);
     content: "宿泊料金";
     font-size: rem(18);
     color: $navy;
+    @include mq(md) {
+        font-size: rem(16);
+        bottom: rem(-22);
+    }
 }
-.p-price__inner{
-    padding-top:rem(100);
+.p-price__inner {
+    padding-top: rem(100);
     width: 100%;
     margin: 0 auto;
-max-width: rem(700);
-position: relative;
-text-align: left;
+    max-width: rem(700);
+    position: relative;
+    text-align: left;
 }
-.p-price__inner::before{
+.p-price__inner::before {
     display: none;
-    @include mq(xl){
-    position: absolute;
-    width: 140%;
-    height:140%;
-    width:11.0vw;
-    height: 23.1vw;
-    top: 50%;
-    transform: translateY(-40%);
-    right: 110%;
-    content: "";
-    background: url(../../../images/common/price-flower.png)no-repeat center center / contain; 
-    overflow: hidden;
-    display: block;
-        }
+    @include mq(xl) {
+        position: absolute;
+        width: 140%;
+        height: 140%;
+        width: 11vw;
+        height: 23.1vw;
+        top: 50%;
+        transform: translateY(-40%);
+        right: 110%;
+        content: "";
+        background: url(../images/common/price-flower.png) no-repeat center center / contain;
+        overflow: hidden;
+        display: block;
+    }
 }
-.p-price__inner::after{
+.p-price__inner::after {
     display: none;
-    @include mq(xl){
-    position: absolute;
-    width:11.0vw;
-    height: 23.1vw;
-    top: 50%;
-    transform: translateY(-40%);
-    left: 110%;
-    content: "";
-    background: url(../../../images/common/price-flower.png)no-repeat center center / contain; 
-    overflow: hidden;
-    display: block;
+    @include mq(xl) {
+        position: absolute;
+        width: 11vw;
+        height: 23.1vw;
+        top: 50%;
+        transform: translateY(-40%);
+        left: 110%;
+        content: "";
+        background: url(../images/common/price-flower.png) no-repeat center center / contain;
+        overflow: hidden;
+        display: block;
+    }
+}
+.p-price__texts {
+    padding-bottom: rem(10);
+    @include mq(md) {
+        display: none;
+    }
+}
+.price__sub-title {
+    font-size: rem(24);
+    font-family: $base-font-family;
+    color: $black;
+}
+.price__texts {
+    display: flex;
+    padding-bottom: rem(20);
+    @include mq(md) {
+        display: none;
+        flex-direction: column;
+    }
+}
+.p-price__text--top {
+    border-bottom: 1px solid $black;
+    padding-bottom: rem(5);
+}
+.price__text--left {
+    font-size: rem(18);
+    font-family: $base-font-family;
+    width: 38%;
+    padding-left: rem(3);
+    letter-spacing: 1.25px;
+    @include mq(md) {
+        width: 100%;
+        padding-left: rem(120);
+        text-align: left;
+        padding-bottom: rem(5);
+        padding-top: rem(20);
+        font-weight: $bold;
+        @media screen and (max-width: 630px) {
+            padding-left: 0;
         }
+    }
 }
-.p-price__texts{
-padding-bottom: rem(10);
+.price-center--center {
+    font-size: rem(18);
+    font-family: $base-font-family;
+    width: 30%;
+    text-align: right;
+    padding-right: rem(10);
+    letter-spacing: 1.25px;
 }
-.price__sub-title{
-font-size: rem(24);
-font-family: $base-font-family;
-padding-bottom: rem(10);
-color: $black;
-
+.price-center--right {
+    font-size: rem(18);
+    font-family: $base-font-family;
+    width: 32%;
+    letter-spacing: 1.25px;
 }
-.price__texts{
-display: flex;
-padding-bottom: rem(20);
-
-}
-.p-price__text--top{
-  border-bottom: 1px solid $black;
-  padding-bottom: rem(5);
-}
-.price__text--left{
-font-size: rem(18);
-font-family: $base-font-family;
-width: 40%;
-padding-left: rem(3);
-letter-spacing: 1.25px;
-}
-.price-center--center{
- font-size: rem(18);
-font-family: $base-font-family;
-width: 30%;
-text-align: right;
-padding-right: rem(10);
-letter-spacing: 1.25px;
-}
-.price-center--right{
-font-size: rem(18);
-font-family: $base-font-family;
-width: 30%;
-letter-spacing: 1.25px;
-    
-}
-
-.price-center--left-center{
-    width: 70%;
+.price-center--left-center {
+    width: 68%;
     letter-spacing: 1.25px;
     text-align: right;
     padding-right: rem(10);
     font-size: rem(18);
-font-family: $base-font-family;
-    
+    font-family: $base-font-family;
 }
-.price-center--right{
+.price-center--right {
     letter-spacing: 1.25px;
-    width: 30%;
+    width: 32%;
     font-size: rem(18);
-font-family: $base-font-family;
-
+    font-family: $base-font-family;
 }
-.p-price__text--bottom{
+.p-price__text--bottom {
     text-align: center;
     letter-spacing: 1.25px;
-
 }
-.text-attention{
-padding-top: rem(50);
-display: inline-block;
+.text-attention {
+    padding-top: rem(50);
+    display: inline-block;
 }
-.text-attention__list{
-text-align: left;
-letter-spacing: 1.25px;
-font-family: $base-font-family;
-color: $black;
+.text-attention__list {
+    text-align: left;
+    letter-spacing: 1.25px;
+    font-family: $base-font-family;
+    color: $black;
+}
+.price__text--pc {
+    display: flex;
+    @include mq(md) {
+        display: none;
+    }
+}
+.p-price__text--middle {
+    display: flex;
+    @include mq(md) {
+        display: none;
+    }
+}
+// sp
+.p-price__texts--sp {
+    display: none;
+    @include mq(md) {
+        display: block;
+        //  border-bottom: 1px solid #000;
+    }
+}
+.sp-price {
+    padding-left: rem(10);
+}
+.p-price-pc {
+    display: none;
+}
+.price__text--sp-right {
+    display: flex;
+    justify-content: center;
+}
+.price-center--sp-right {
+    width: 100%;
+    padding-left: rem(10);
+}
+.price-center--sp-center {
+    width: 100%;
+}
+.price__text--sp {
+    display: none;
+    @include mq(md) {
+        display: block;
+    }
 }
