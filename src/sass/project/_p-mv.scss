@@ -8,6 +8,10 @@
     @include mq(md) {
         padding-top: rem(120);
     }
+    @media screen and (max-width: 415px){
+     padding-right: rem(20);
+     padding-left: rem(20);
+    }
     @include mq(sm) {
         padding-left: rem(15);
         padding-right: rem(15);

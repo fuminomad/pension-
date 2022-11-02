@@ -97,7 +97,7 @@
 .price__sub-title {
     font-size: rem(24);
     font-family: $base-font-family;
-    color: $black;
+    color: $navy;
 }
 .price__texts {
     display: flex;
@@ -164,6 +164,12 @@
 .text-attention {
     padding-top: rem(50);
     display: inline-block;
+}
+.text-attention-pc{
+    display: inline-block;
+    @include mq(md){
+        display: none;
+        }
 }
 .text-attention__list {
     text-align: left;
